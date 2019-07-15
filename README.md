@@ -1,5 +1,5 @@
 # RadialGradient
-A C++ class used to generate a variety of radial gradients. This was created as part of another of my projects and is not polished yet.
+A C++ class used to generate a variety of radial gradients. This was created as part of another one of my projects and is not polished yet.
 
 ## Tutorial:
 
