@@ -33,6 +33,7 @@ vector<vector<T>> RadialGradient<T>::getGradient() {
 	return gradient;
 }
 
+//NOTE: This may be removed.
 template <class T>
 void RadialGradient<T>::altNormalRadialGradient(int width, int height, T smallest, T largest) {
 	this->smallest = smallest;
@@ -249,6 +250,7 @@ void RadialGradient<T>::rectangularRadialGradient(int width, int height, T small
 	}
 }
 
+//Higher values of n result in a gradient with a less blurry edge.
 template <class T>
 void RadialGradient<T>::decreasingRadialGradient(int width, int height, T smallest, T largest, double n) {
 	this->smallest = smallest;
@@ -277,6 +279,7 @@ void RadialGradient<T>::decreasingRadialGradient(int width, int height, T smalle
 			gradient[y][x] = static_cast<T>(value);
 		}
 	}
+	this->invert();
 }
 
 template <class T>
@@ -326,6 +329,7 @@ void RadialGradient<T>::sharpRadialGradient(int width, int height, T smallest, T
 	}
 }
 
+//TODO: Make these value customizable.
 template <class T>
 void RadialGradient<T>::makeRinged() {
 	for (int y = 0; y < gradient.size(); y++) {
